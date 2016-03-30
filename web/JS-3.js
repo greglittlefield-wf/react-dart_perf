@@ -45,10 +45,12 @@ var BoxesView = React.createClass({
 
 var counter = 0;
 
+var container = document.getElementById('example-container');
+
 var reactAnimate = function() {
     React.render(
         React.createElement(BoxesView, {count: counter++}),
-        document.getElementById('example-container')
+        container
     );
     setTimeout(reactAnimate, 0);
 };

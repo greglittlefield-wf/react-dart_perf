@@ -10,12 +10,12 @@ void main() {
 
   num counter = 0;
 
+  var container = querySelector('#example-container');
+
   void reactAnimate() {
-    react.render(
-        boxesView({'count': counter++}), querySelector('#example-container'));
+    react.render(boxesView({'count': counter++}), container);
     new Timer(Duration.ZERO, reactAnimate);
   }
-  ;
 
   new Timer(Duration.ZERO, reactAnimate);
 }
